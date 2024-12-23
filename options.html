@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chaos-Summary 设置</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        select,
+        input {
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chaos-Summary 设置</h1>
+    <label>
+        摘要详细程度:
+        <select id="detail-level">
+            <option value="short">简短</option>
+            <option value="medium" selected>中等</option>
+            <option value="detailed">详细</option>
+        </select>
+    </label>
+    <label>
+        主题颜色:
+        <input type="color" id="theme-color" value="#AFD">
+    </label>
+    <button id="save-btn">保存</button>
+    <div id="status"></div>
+
+    <script src="options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Chaos-Summary",
+    "version": "1.1",
+    "description": "使用 AI 总结选中的文本。",
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "/imgs/icon-16.png",
+        "128": "/imgs/icon-192.png"
+    }
+}
